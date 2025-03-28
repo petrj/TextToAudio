@@ -1,8 +1,9 @@
 # TextToAudio
-Powershell code for generating audio from text
+Powershell module for generating audio from text
 
 Input example:
 
+```
 SHE: Could you take out the trash? It's already full.
 
 HE: Sure, I'll do it right now.
@@ -36,13 +37,14 @@ SHE: After dinner, you won’t feel like it. Do it now.
 HE: Fine, I’ll do it now.
 
 SHE: Thank you. And when you're done, could you also water the plants?
-
+```
 
 Output:
 
 17 mp3 files:
 
 
+```
 001__Could_you_take_out_the_trash__It_s_already_full_.mp3
 002__Sure__I_ll_do_it_right_now_.mp3
 003__Not__right_now___you_said_that_yesterday__and_it_s_still_here_.mp3
@@ -60,3 +62,4 @@ Output:
 015__After_dinner__you_won_t_feel_like_it__Do_it_now_.mp3
 016__Fine__I_ll_do_it_now_.mp3
 017__Thank_you__And_when_you_re_done__could_you_also_water_the_plants_.mp3
+```
