@@ -1,0 +1,12 @@
+{
+    "apiKey": "",
+    "voices": [
+        { "name": "SHE", "id": "XrExE9yKIg1WjnnlVkGX", "alias": "Matilda" },
+        { "name": "HE", "id": "TX3LPaxmHKxFdv7VOQHJ", "alias": "Liam" },
+        { "name": "ONA", "id": "12CHcREbuPdJY02VY7zT", "alias": "Hanka (beta)" },
+        { "name": "ON", "id": "uYFJyGaibp4N2VwYQshk", "alias": "Adam" },
+        { "name": "VYPRAVĚČ", "id": "NHv5TpkohJlOhwlTCzJk", "alias": "Pawel" },
+        { "name": "IRIS", "id": "12CHcREbuPdJY02VY7zT", "alias": "Hanka (beta)" },
+        { "name": "LEA", "id": "21m00Tcm4TlvDq8ikWAM", "alias": "Rachel" }
+    ]
+}
