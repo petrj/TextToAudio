@@ -21,7 +21,7 @@ Powershell module for generating audio from text using [ElvenLabs](https://eleve
 2. Import ElvenLabs PS module
 
 ```
-Import-Module ./ElevenLabs -Force 
+Import-Module ./ElevenLabs
 ```
 
 
