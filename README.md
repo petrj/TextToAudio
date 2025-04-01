@@ -97,3 +97,8 @@ Output:
 016__Fine__I_ll_do_it_now_.mp3
 017__Thank_you__And_when_you_re_done__could_you_also_water_the_plants_.mp3
 ```
+
+Exported mp3 files can be joined using ffmpeg:
+```
+ffmpeg -i "concat:$(echo *.mp3 | tr ' ' '|')" -acodec copy output.mp3
+```
