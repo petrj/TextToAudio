@@ -1,5 +1,5 @@
 # TextToAudio
-Powershell module for generating audio from text using [ElvenLabs](https://elevenlabs.io/) 
+Powershell module for generating audio from text using [ElevenLabs](https://elevenlabs.io/) 
 
 1. Create configuration with your API Key and voices and save it to config.json
 ```
