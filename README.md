@@ -1,7 +1,57 @@
 # TextToAudio
-Powershell module for generating audio from text
+Powershell module for generating audio from text using [ElvenLabs](https://elevenlabs.io/) 
 
-Input example:
+1. Create configuration with your API Key and voices and save it to config.json
+```
+{
+    "apiKey": "",
+    "voices": [
+        { "name": "SHE", "id": "XrExE9yKIg1WjnnlVkGX", "alias": "Matilda" },
+        { "name": "HE", "id": "TX3LPaxmHKxFdv7VOQHJ", "alias": "Liam" },
+        { "name": "ONA", "id": "12CHcREbuPdJY02VY7zT", "alias": "Hanka (beta)" },
+        { "name": "ON", "id": "uYFJyGaibp4N2VwYQshk", "alias": "Adam" },
+        { "name": "VYPRAVĚČ", "id": "NHv5TpkohJlOhwlTCzJk", "alias": "Pawel" },
+        { "name": "IRIS", "id": "12CHcREbuPdJY02VY7zT", "alias": "Hanka (beta)" },
+        { "name": "RACHEL", "id": "21m00Tcm4TlvDq8ikWAM", "alias": "Rachel" }
+    ]
+}
+```
+
+
+2. Import ElvenLabs PS module
+
+```
+Import-Module ./ElevenLabs -Force 
+```
+
+
+3. Load your configuration
+
+```
+$config = Get-Content -Path ./config.json | ConvertFrom-Json
+```
+
+4. Create mp3 from your text
+
+- single text
+```
+Save-TextAsMP3 -Text "Hello world" -ApiKey $config.apiKey -VoiceId "TX3LPaxmHKxFdv7VOQHJ" -Language "english"
+``` 
+
+- dialog with voice definition
+```
+@"
+SHE: Could you take out the trash? It's already full.`n
+HE: Sure, I'll do it right now.
+"@ | Save-TextListAsMP3 -Configuration $config -Language "english" -StartCountFrom 5 -ExportDirectory . 
+```
+
+- dialog from text file
+```
+Get-Content -Path ./input.txt | Save-TextListAsMP3 -Configuration $config -ExportDirectory .  -TextToFileName
+```
+
+input.txt example:
 
 ```
 SHE: Could you take out the trash? It's already full.
