@@ -21,7 +21,7 @@ Powershell module for generating audio from text using [ElevenLabs](https://elev
 2. Import ElevenLabs PS module
 
 ```
-Import-Module ./ElevenLabs
+Import-Module ./ElevenLabs.psm1
 ```
 
 
