@@ -102,3 +102,36 @@ Exported mp3 files can be joined using ffmpeg:
 ```
 ffmpeg -i "concat:$(echo *.mp3 | tr ' ' '|')" -acodec copy output.mp3
 ```
+
+
+Get all available voices:
+```
+Get-Voices -Configuration $config
+```
+
+Output:
+```
+name      voice_id
+----      --------
+Aria      9BWtsMINqrJLrRacOk9x
+Roger     CwhRBWXzGAHq8TQ4Fs17
+Sarah     EXAVITQu4vr4xnSDxMaL
+Laura     FGY2WhTYpPnrIDTdsKH5
+Charlie   IKne3meq5aSn9XLyUdCD
+George    JBFqnCBsd6RMkjVDRZzb
+Callum    N2lVS1w4EtoT3dr4eOWO
+River     SAz9YHcvj6GT2YYXdXww
+Liam      TX3LPaxmHKxFdv7VOQHJ
+Charlotte XB0fDUnXU5powFXDhCwa
+Alice     Xb7hH8MSUJpSbSDYk0k2
+Matilda   XrExE9yKIg1WjnnlVkGX
+Will      bIHbv24MWmeRgasZH58o
+Jessica   cgSgspJ2msm6clMCkdW9
+Eric      cjVigY5qzO86Huf0OWal
+Chris     iP95p4xoKVk53GoZ742B
+Brian     nPczCjzI2devNBz1zQrb
+Daniel    onwK4e9ZLuTAKqWW03F9
+Lily      pFZP5JQG7iQjIQuC4Bku
+Bill      pqHfZKP75CvOlQylNhV4
+
+```
